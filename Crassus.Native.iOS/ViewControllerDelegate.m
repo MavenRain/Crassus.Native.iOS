@@ -6,17 +6,15 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "ViewControllerDelegate.h"
+@import UIKit;
 #import "Crassus_Native_iOS-Swift.h"
 
-void* CrassusCreateViewController(SingleObjectAction viewDidLoad)
+void * CrassusCreateViewController(SingleObjectAction viewDidLoad)
 {
-    return (void*)CFBridgingRetain([CrassusViewController create:viewDidLoad]);
+    return (void *)CFBridgingRetain([CrassusViewController create:viewDidLoad]);
 }
 
-void* CrassusGetView(void* viewController)
+void * CrassusGetView(void * viewController)
 {
-    return (__bridge void*)((__bridge UIViewController*)viewController).view;
+    return (__bridge void *)((__bridge UIViewController*)viewController).view;
 }

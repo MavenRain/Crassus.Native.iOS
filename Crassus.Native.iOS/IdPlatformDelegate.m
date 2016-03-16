@@ -6,9 +6,7 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import "IdPlatformDelegate.h"
-
-void* Sublimate(id object)
+void * Sublimate(id object)
 {
-    return (__bridge void*)object;
+    return (__bridge void *)object;
 }

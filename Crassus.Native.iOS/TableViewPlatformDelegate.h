@@ -11,6 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-void* LiftTableView(UITableView* tableView);
+void * LiftTableView(UITableView* tableView);
 
 #endif /* TableViewPlatformDelegate_h */

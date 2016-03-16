@@ -10,7 +10,7 @@
 #define ViewPlatformDelegate_h
 #import <UIKit/UIKit.h>
 
-void* LiftView(UIView* view);
-UIView* PressView(void* view);
+void * LiftView(UIView * view);
+UIView * PressView(void * view);
 
 #endif /* ViewPlatformDelegate_h */

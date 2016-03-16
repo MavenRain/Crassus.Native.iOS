@@ -6,10 +6,14 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-void CrassusSetRootViewController(void* window, void* viewController)
+void CrassusSetRootViewController(void * window, void * viewController)
 {
     ((__bridge UIWindow*)window).rootViewController = CFBridgingRelease(viewController);
+}
+
+void * CrassusGetMasterView(void * window)
+{
+    return (__bridge void *)[((__bridge UIWindow *)window).subviews objectAtIndex:0];
 }

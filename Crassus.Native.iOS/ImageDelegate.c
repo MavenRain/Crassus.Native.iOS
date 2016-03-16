@@ -8,7 +8,7 @@
 
 #include "ImageDelegate.h"
 
-void* CreateImage(const char * url, TextObjectFunction function)
+void * CreateImage(const char * url, TextObjectFunction function)
 {
     return (*function)(url);
 }

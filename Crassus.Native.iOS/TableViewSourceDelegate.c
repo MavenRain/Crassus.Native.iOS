@@ -8,7 +8,7 @@
 
 #include "TableViewSourceDelegate.h"
 
-void* CreateTableViewSource(TableViewSource source, TableViewSourceCreator function)
+void * CreateTableViewSource(TableViewSource source, TableViewSourceCreator function)
 {
     return (*function)(source);
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import "NsObjectPlatformDelegate.h"
+@import Foundation;
 
-void* LiftObject(NSObject* object)
+void * LiftObject(NSObject* object)
 {
-    return (__bridge void*)object;
+    return (__bridge void *)object;
 }

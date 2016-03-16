@@ -9,27 +9,27 @@
 #include "LabelDelegate.h"
 #include "GlobalDefinitions.h"
 
-void* CreateLabel(Frame frame, const char * text, unsigned int fontSize, LabelCreator function)
+void * CreateLabel(Frame frame, const char * text, unsigned int fontSize, LabelCreator function)
 {
     return (*function)(frame, text, fontSize);
 }
 
-void CenterLabelText(void* label, SingleObjectAction action)
+void CenterLabelText(void * label, SingleObjectAction action)
 {
     (*action)(label);
 }
 
-void SetLabelTextColor(void* label, Rgba color, ViewColorAction action)
+void SetLabelTextColor(void * label, Rgba color, ViewColorAction action)
 {
     (*action)(label, color);
 }
 
-void* CreateBoldLabel(Frame frame, const char * text, unsigned int fontSize, LabelCreator function)
+void * CreateBoldLabel(Frame frame, const char * text, unsigned int fontSize, LabelCreator function)
 {
     return (*function)(frame, text, fontSize);
 }
 
-void SetNumberOfLines(void* label, unsigned int numberOfLines, ObjectWholeNumberAction action)
+void SetNumberOfLines(void * label, unsigned int numberOfLines, ObjectWholeNumberAction action)
 {
     (*action)(label, numberOfLines);
 }

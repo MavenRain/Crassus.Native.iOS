@@ -15,11 +15,6 @@ import Foundation
         self.performSelector(Selector((((sender as! UITapGestureRecognizer).view) as! CrassusView).handler), withObject: (((sender as! UITapGestureRecognizer).view) as! CrassusView).superview)
     }
     
-    func helloClick(sender: AnyObject)
-    {
-        HelloClick(Sublimate(sender))
-    }
-    
     func dismissKeyboardFromSubviews(containingView: AnyObject)
     {
         for view in (containingView as! UIView).subviews
@@ -31,5 +26,32 @@ import Foundation
             }
         }
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,14 +6,15 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
+#include "GlobalDefinitions.h"
 #include "ImageViewDelegate.h"
 
-void* CreateImageViewFromImage(void* image, Exchanger function)
+void * CreateImageViewFromImage(void * image, Exchanger function)
 {
     return (*function)(image);
 }
 
-void SetUserInteraction(void* imageView, Bools enabled, ObjectToggler function)
+void SetUserInteraction(void * imageView, Bools enabled, ObjectToggler function)
 {
     (*function)(imageView, enabled);
 }

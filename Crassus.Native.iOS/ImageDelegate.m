@@ -6,11 +6,9 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "ImageDelegate.h"
+@import UIKit;
 
-void* CrassusCreateImage(const char * url)
+void * CrassusCreateImage(const char * url)
 {
-    return (void*)CFBridgingRetain([UIImage imageNamed:[NSString stringWithUTF8String:url]]);
+    return (void *)CFBridgingRetain([UIImage imageNamed:[NSString stringWithUTF8String:url]]);
 }

@@ -9,8 +9,6 @@
 #ifndef TableViewCellPlatformDelegate_h
 #define TableViewCellPlatformDelegate_h
 
-#include "GlobalDefinitions.h"
-
-UITableViewCell* PressTableViewCell(void* cell);
+UITableViewCell* PressTableViewCell(void * cell);
 
 #endif /* TableViewCellPlatformDelegate_h */

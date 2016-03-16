@@ -10,9 +10,9 @@
 #define ImageDelegate_h
 
 #include <stdio.h>
-typedef void*(*TextObjectFunction)(const char *);
+typedef void *(*TextObjectFunction)(const char *);
 
-void* CreateImage(const char * url, TextObjectFunction function);
-void* CrassusCreateImage(const char * url);
+void * CreateImage(const char * url, TextObjectFunction function);
+void * CrassusCreateImage(const char * url);
 
 #endif /* ImageDelegate_h */

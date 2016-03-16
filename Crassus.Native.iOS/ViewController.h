@@ -10,9 +10,9 @@
 #define ViewController_h
 
 #include <stdio.h>
-typedef void(*SingleObjectAction)(void*);
+typedef void(*SingleObjectAction)(void *);
 #endif /* ViewController_h */
 
-void ViewController(void* containingView);
+void ViewController(void * containingView);
 SingleObjectAction ViewControllerLoader();
-void HelloClick(void* containingView);
+void HelloClick(void * containingView);

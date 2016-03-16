@@ -6,9 +6,7 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "StringPlatformDelegate.h"
+@import Foundation;
 
 NSString* PressString(const char * string)
 {

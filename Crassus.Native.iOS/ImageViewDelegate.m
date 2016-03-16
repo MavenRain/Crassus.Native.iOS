@@ -6,17 +6,16 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "GlobalDefinitions.h"
 
 
-void* CrassusCreateImageViewFromImage(void* image)
+void * CrassusCreateImageViewFromImage(void * image)
 {
-    return (void*)CFBridgingRetain([[UIImageView alloc] initWithImage:(__bridge_transfer UIImage*)image]);
+    return (void *)CFBridgingRetain([[UIImageView alloc] initWithImage:(__bridge_transfer UIImage*)image]);
 }
 
-void CrassusSetUserInteraction(void* imageView, Bools enabled)
+void CrassusSetUserInteraction(void * imageView, Bools enabled)
 {
     ((__bridge UIImageView*)imageView).userInteractionEnabled = enabled == BoolsYES;
 }

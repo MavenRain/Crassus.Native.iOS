@@ -8,12 +8,12 @@
 
 #include "IndexPathDelegate.h"
 
-long GetIndexPathSection(void* indexPath, ObjectLongNumberFunction function)
+long GetIndexPathSection(void * indexPath, ObjectLongNumberFunction function)
 {
     return (*function)(indexPath);
 }
 
-long GetIndexPathRow(void* indexPath, ObjectLongNumberFunction function)
+long GetIndexPathRow(void * indexPath, ObjectLongNumberFunction function)
 {
     return (*function)(indexPath);
 }

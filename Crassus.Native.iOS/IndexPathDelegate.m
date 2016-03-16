@@ -6,16 +6,14 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "IndexPathDelegate.h"
+@import UIKit;
 
-long CrassusGetIndexPathSection(void* indexPath)
+long CrassusGetIndexPathSection(void * indexPath)
 {
     return ((__bridge NSIndexPath*)indexPath).section;
 }
 
-long CrassusGetIndexPathRow(void* indexPath)
+long CrassusGetIndexPathRow(void * indexPath)
 {
     return ((__bridge NSIndexPath*)indexPath).row;
 }

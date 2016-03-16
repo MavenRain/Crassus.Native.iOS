@@ -11,6 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-void* LiftObject(NSObject* object);
+void * LiftObject(NSObject* object);
 
 #endif /* NsObjectPlatformDelegate_h */

@@ -8,7 +8,12 @@
 
 #include "WindowDelegate.h"
 
-void SetRootViewController(void* window, void* viewController, DoubleObjectAction action)
+void SetRootViewController(void * window, void * viewController, DoubleObjectAction action)
 {
     (*action)(window, viewController);
+}
+
+void * GetMasterView(void * window, Exchanger function)
+{
+    return (*function)(window);
 }

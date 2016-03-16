@@ -6,9 +6,9 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import "TableViewPlatformDelegate.h"
+@import UIKit;
 
-void* LiftTableView(UITableView* tableView)
+void * LiftTableView(UITableView* tableView)
 {
-    return (__bridge void*)tableView;
+    return (__bridge void *)tableView;
 }

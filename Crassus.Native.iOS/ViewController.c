@@ -14,12 +14,12 @@
 #include <string.h>
 
 unsigned int CrassusCount = 0;
-void* clickLabel;
+void * clickLabel;
 
-void ViewController(void* containingView)
+void ViewController(void * containingView)
 {
     Frame clickFrame = { GetViewFrameWidth(containingView, CrassusGetViewFrameWidth) / 4, GetViewFrameHeight(containingView, CrassusGetViewFrameHeight) / 2 - 10, 150, 50 };
-    void* clickButton = CreateButton(clickFrame, "helloClick:", CrassusCreateButton);
+    void * clickButton = CreateButton(clickFrame, "helloClick:", CrassusCreateButton);
     clickLabel = CreateBoldLabel(clickFrame, "Click here!", 17, CrassusCreateBoldLabel);
     Rgba blue = {0, 0, 1, 1};
     Rgba white = {1, 1, 1, 1};
@@ -38,7 +38,7 @@ SingleObjectAction ViewControllerLoader()
     return ViewController;
 }
 
-void HelloCompletion(void* containingView)
+void HelloCompletion(void * containingView)
 {
     RemoveFromSuperview(clickLabel, CrassusRemoveFromSuperview);
     char number[3];
@@ -57,7 +57,7 @@ void HelloCompletion(void* containingView)
     AnimateIntoView(clickLabel, 0.5, CrassusAnimateIntoView);
 }
 
-void HelloClick(void* containingView)
+void HelloClick(void * containingView)
 {
     ++CrassusCount;
     AnimateOutOfViewWithCompletion(clickLabel, 0.5, HelloCompletion, CrassusAnimateOutOfViewWithCompletion);

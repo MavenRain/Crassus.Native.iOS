@@ -6,10 +6,9 @@
 //  Copyright © 2016 Crassus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-UITableViewCell* PressTableViewCell(void* cell)
+UITableViewCell* PressTableViewCell(void * cell)
 {
     return CFBridgingRelease(cell);
 }

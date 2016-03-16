@@ -7,46 +7,47 @@
 //
 
 #include "GlobalDefinitions.h"
+#include "TableViewSource.h"
 
-int ObjectNumberNumberFunctionBinder(ObjectNumberNumberFunction function, void* object, int number)
+int ObjectNumberNumberFunctionBinder(ObjectNumberNumberFunction function, void * object, int number)
 {
     return (*function)(object, number);
 }
-void* DoubleObjectObjectFunctionBinder(DoubleObjectObjectFunction function, void* object1, void* object2)
+void * DoubleObjectObjectFunctionBinder(DoubleObjectObjectFunction function, void * object1, void * object2)
 {
     return (*function)(object1, object2);
 }
-int ObjectNumberFunctionBinder(ObjectNumberFunction function, void* object)
+int ObjectNumberFunctionBinder(ObjectNumberFunction function, void * object)
 {
     return (*function)(object);
 }
-void* ObjectNumberObjectFunctionBinder(ObjectNumberObjectFunction function, void* object, int number)
+void * ObjectNumberObjectFunctionBinder(ObjectNumberObjectFunction function, void * object, int number)
 {
     return (*function)(object, number);
 }
-void DoubleObjectActionBinder(DoubleObjectAction action, void* object1, void* object2)
+void DoubleObjectActionBinder(DoubleObjectAction action, void * object1, void * object2)
 {
     (*action)(object1, object2);
 }
-float DoubleObjectDecimalFunctionBinder(DoubleObjectDecimalFunction function, void* object1, void* object2)
+float DoubleObjectDecimalFunctionBinder(DoubleObjectDecimalFunction function, void * object1, void * object2)
 {
     return (*function)(object1, object2);
 }
-float ObjectWholeNumberDecimalFunctionBinder(ObjectWholeNumberDecimalFunction function, void* object, unsigned int wholeNumber)
+float ObjectWholeNumberDecimalFunctionBinder(ObjectWholeNumberDecimalFunction function, void * object, unsigned int wholeNumber)
 {
     return (*function)(object, wholeNumber);
 }
-const char * ObjectWholeNumberTextFunctionBinder(ObjectWholeNumberTextFunction function, void* object, unsigned int wholeNumber)
+const char * ObjectWholeNumberTextFunctionBinder(ObjectWholeNumberTextFunction function, void * object, unsigned int wholeNumber)
 {
     return (*function)(object, wholeNumber);
 }
 
-float ObjectNumberDecimalFunctionBinder(ObjectNumberDecimalFunction function, void* object, int number)
+float ObjectNumberDecimalFunctionBinder(ObjectNumberDecimalFunction function, void * object, int number)
 {
     return (*function)(object, number);
 }
 
-unsigned int SingleObjectWholeNumberFunctionBinder(ObjectNumberFunction function, void* object)
+unsigned int SingleObjectWholeNumberFunctionBinder(ObjectNumberFunction function, void * object)
 {
     return (*function)(object);
 }

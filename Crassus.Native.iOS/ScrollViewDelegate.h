@@ -1,13 +1,17 @@
 //
-//  SwitchDelegate.h
-//  TheObiG LLC
+//  ScrollViewDelegate.h
+//  BowlingScoreTracker
 //
-//  Created by SolomonRain on 2/15/16.
-//  Copyright © 2016 Crassus. All rights reserved.
+//  Created by SolomonRain on 3/12/16.
+//  Copyright © 2016 TheObiGLLC. All rights reserved.
 //
 
-#ifndef SwitchDelegate_h
-#define SwitchDelegate_h
+#ifndef ScrollViewDelegate_h
+#define ScrollViewDelegate_h
+
+#include <stdio.h>
+
+#endif /* ScrollViewDelegate_h */
 
 typedef struct Frame Frame;
 
@@ -154,16 +158,49 @@ extern "C"
     typedef void *(*DoubleTextObjectFunction)(const char *, const char *);
     typedef enum Bools(*DoubleTextConditionalFunction)(const char *, const char *);
     typedef const char *(*ObjectTextFunction)(void *);
+    typedef float(*ObjectDecimalFunction)(void *);
+    
+    void * CreateScrollView(Frame frame, ViewCreator function);
+    void * CrassusCreateScrollView(Frame frame);
+    float GetContentHeight(void * scrollView, ObjectDecimalFunction function);
+    float CrassusGetContentHeight(void * scrollView);
+    float GetContentWidth(void * scrollView, ObjectDecimalFunction function);
+    float CrassusGetContentWidth(void * scrollView);
+    void SetContentHeight(void * scrollView, float height, ObjectDecimalAction action);
+    void CrassusSetContentHeight(void * scrollView, float height);
+    void SetContentWidth(void * scrollView, float width, ObjectDecimalAction action);
+    void CrassusSetContentWidth(void * scrollView, float width);
 
-void * CreateSwitch(Frame frame, ViewCreator function);
-void * CrassusCreateSwitch(Frame frame);
-void AddSwitchValueChangedHandler(void * crassusSwitch, SingleObjectAction handler, ObjectActionBlockAction action);
-void CrassusAddSwitchValueChangedHandler(void * crassusSwitch, SingleObjectAction handler);
-Bools IsSwitchOn(void * crassusSwitch, ObjectPredicate function);
-Bools CrassusIsSwitchOn(void * crassusSwitch);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* SwitchDelegate_h */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

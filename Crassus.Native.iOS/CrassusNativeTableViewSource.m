@@ -6,8 +6,7 @@
 //  Copyright © 2016 TheObiGLLC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "CrassusNativeTableViewSource.h"
 
 @implementation CrassusNativeTableViewSource
@@ -22,12 +21,12 @@
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return (*tableViewSource.rowsInSection)((__bridge void*)tableView, (int)section);
+    return (*tableViewSource.rowsInSection)((__bridge void *)tableView, (int)section);
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (__bridge UITableViewCell*)(*tableViewSource.getCell)((__bridge void*)tableView, (__bridge void*)indexPath);
+    return (__bridge UITableViewCell*)(*tableViewSource.getCell)((__bridge void *)tableView, (__bridge void *)indexPath);
 }
 
 + (CrassusNativeTableViewSource*)create:(TableViewSource)source
@@ -37,22 +36,22 @@
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [NSString stringWithUTF8String:(*tableViewSource.titleForHeader)((__bridge void*)tableView, (int)section)];
+    return [NSString stringWithUTF8String:(*tableViewSource.titleForHeader)((__bridge void *)tableView, (int)section)];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    (*tableViewSource.rowSelected)((__bridge void*)tableView, (__bridge void*)indexPath);
+    (*tableViewSource.rowSelected)((__bridge void *)tableView, (__bridge void *)indexPath);
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return (*tableViewSource.getHeightForHeader)((__bridge void*)tableView, (int)section);
+    return (*tableViewSource.getHeightForHeader)((__bridge void *)tableView, (int)section);
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return (*tableViewSource.numberOfSections)((__bridge void*)tableView);
+    return (*tableViewSource.numberOfSections)((__bridge void *)tableView);
 }
 
 @end

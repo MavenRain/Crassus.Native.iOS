@@ -7,18 +7,19 @@
 //
 
 #include "SwitchDelegate.h"
+#include "GlobalDefinitions.h"
 
-void* CreateSwitch(Frame frame, ViewCreator function)
+void * CreateSwitch(Frame frame, ViewCreator function)
 {
     return (*function)(frame);
 }
 
-void AddSwitchValueChangedHandler(void* crassusSwitch, SingleObjectAction handler, ObjectActionBlockAction action)
+void AddSwitchValueChangedHandler(void * crassusSwitch, SingleObjectAction handler, ObjectActionBlockAction action)
 {
     (*action)(crassusSwitch, handler);
 }
 
-Bools IsSwitchOn(void* crassusSwitch, ObjectPredicate function)
+Bools IsSwitchOn(void * crassusSwitch, ObjectPredicate function)
 {
     return (*function)(crassusSwitch);
 }

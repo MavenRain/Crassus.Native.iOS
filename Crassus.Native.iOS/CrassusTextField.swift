@@ -24,7 +24,22 @@ class CrassusTextField : UITextField, UITextFieldDelegate
     {
         let textField = CrassusTextField(frame: CGRectMake(CGFloat(frame.x), CGFloat(frame.y), CGFloat(frame.width), CGFloat(frame.height)))
         textField.delegate = textField
+        textField.addTarget(textField, action: "textIsChanging:", forControlEvents: .EditingChanged)
+        textField.addTarget(textField, action: Selector("textDidChange:"), forControlEvents: .EditingDidEnd)
+        textField.addTarget(textField, action: Selector("textMayChange:"), forControlEvents: .EditingDidBegin)
         return textField
+    }
+    
+    func textIsChanging(textField: UITextField)
+    {
+    }
+    
+    func textDidChange(textField: UITextField)
+    {
+    }
+    
+    func textMayChange(textField: UITextField)
+    {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
@@ -32,4 +47,26 @@ class CrassusTextField : UITextField, UITextFieldDelegate
         self.resignFirstResponder()
         return true
     }
+    
+    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool
+    {
+        return false
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

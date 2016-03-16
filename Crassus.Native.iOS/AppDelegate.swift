@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TheObiG LLC
+//  BowlingScoreTracker
 //
-//  Created by SolomonRain on 2/15/16.
-//  Copyright © 2016 Crassus. All rights reserved.
+//  Created by SolomonRain on 3/11/16.
+//  Copyright © 2016 TheObiGLLC. All rights reserved.
 //
 
 import UIKit
@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
 
 }
 
